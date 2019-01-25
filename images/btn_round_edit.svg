@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>images/btn_round_edit</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#FFC920" offset="0%"></stop>
+            <stop stop-color="#FFDA80" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-2.6%" y="-2.6%" width="105.3%" height="110.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowOffsetOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="images/btn_round_edit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <circle id="Oval" fill="url(#linearGradient-1)" cx="18.5" cy="18.5" r="18.5"></circle>
+            <g id="boxicon-edit" filter="url(#filter-2)" transform="translate(11.000000, 8.000000)" fill="#000000" fill-rule="nonzero">
+                <path d="M14.974,1.026 C14.583,0.635 13.951,0.635 13.56,1.026 L4.56,10.026 C4.407,10.179 4.308,10.378 4.277,10.591 L3.777,14.091 C3.733,14.403 3.838,14.717 4.06,14.94 C4.248,15.129 4.503,15.233 4.767,15.233 C4.814,15.233 4.861,15.23 4.909,15.223 L8.409,14.723 C8.623,14.693 8.821,14.593 8.974,14.44 L17.974,5.44 C18.365,5.049 18.365,4.417 17.974,4.026 L14.974,1.026 Z M7.795,12.79 L5.945,13.054 L6.209,11.204 L14.267,3.147 L15.853,4.733 L7.795,12.79 Z" id="Shape"></path>
+                <path d="M1,19 L15,19 C15.553,19 16,18.552 16,18 L16,11 L14,11 L14,17 L2,17 L2,5 L8,5 L8,3 L1,3 C0.447,3 0,3.448 0,4 L0,18 C0,18.552 0.447,19 1,19 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

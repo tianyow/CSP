@@ -1,0 +1,197 @@
+@import 'mixins';
+//@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700);
+// Global Styles
+* {
+  box-sizing: border-box;
+}
+::selection {
+  background: $main-yellow;
+}
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+body {
+  color: #111;
+  font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  color: #000;
+  &:focus {
+    outline: none;
+  }
+}
+.btn {
+  border: 0;
+  border-radius: 0;
+  display: inline-block;
+  font-size: 16px; 
+  font-weight: bold;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  text-decoration: none;
+  img {
+    float: left;
+    margin-right: 5px;
+  }
+}
+.btn-round {
+  @include borderRadius(32px);
+}
+.btn-gradient {
+  color: #111;
+  @include linear-gradient(top, lighten($main-yellow, 25%), $main-yellow); 
+  &:hover,
+  &:focus {
+    background: $main-yellow;
+    color: #111;
+    text-decoration: none;
+  }
+  &:focus {
+    @include dropShadow(0, 1px, 3px, 0px, $main-yellow);
+  }
+  &:active {
+    background: $main-yellow !important;
+  }
+}
+.btn-gradient-red {
+  color: #fff;
+  @extend .btn-gradient;
+  @include linear-gradient(top, red, darken(red, 10%));
+  &:active {
+    background: red !important;
+  }
+  &:hover,
+  &:focus {
+    background: red !important;
+    color: #fff;
+  }
+}
+
+// ------------------------------------------------------------------------------------------------ //
+// Login Styles
+.loginWrapper {
+  @include linear-gradient(top, #000, #444);
+}
+.login-wrap {
+  color: $main-yellow;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  width: 360px;
+  height: 390px;
+
+  h1 {
+    font-size: 64px;
+    line-height: 1;
+    margin: 0;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: 7px;
+    margin: 10px 0;
+  }
+  label {
+    color: $main-yellow;
+    font-size: 10px;
+    float: left;
+    text-align: left;
+    position: relative;
+    width: 100%;
+    &:after {
+      content: '';
+      display: block;
+      border-top: 1px solid $main-yellow;
+      position: absolute;
+      top: 10px;
+      left: 80px;
+      right: 0;
+    }
+  }
+  input[type="text"],
+  input[type="password"] {
+    border: 1px solid #333;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 12px 15px;
+    width: 100%;
+    @include borderRadius(2px);
+
+    &:focus {
+      background: lighten($main-yellow, 30%);
+      border: 1px solid $main-yellow;
+      text-align: center;
+    }
+    &.error {
+      background: #ffcdcd;
+    }
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-control {
+    height: auto;
+  }
+  .field-validation-valid {
+    color: #ff7a7a;
+    float: right;
+    font-size: 13px;
+    margin-right: 12px;
+  }
+}
+.form-section {
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: all .3s linear;
+}
+.formHide {
+  opacity: 0;
+  visibility: hidden;
+}
+.formShow {
+  opacity: 1;
+  visibility: visible;
+}
+
+#btn-login,
+#btn-resetPwd {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 12px 8px;
+  width: 100%;
+  @include dropShadow(0, 0px, 10px, 0, #333);
+}
+#btn-login {
+  //@include linear-gradient(top, $yellow-1, $yellow-2);
+}
+#btn-resetPwd {
+  //@include linear-gradient(top, $yellow-1, $yellow-2);
+}
+.formSwitchLink {
+  text-align: center;
+  a {
+    color: #ddd;
+    font-size: 13px;
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+    }
+  }
+}

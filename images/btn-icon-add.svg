@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>boxicon-plus-circle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="CSP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="boxicon-plus-circle" fill="#483310" fill-rule="nonzero">
+            <polygon id="Shape" points="12.0576923 6.00054462 9.94230769 6.00054462 9.94230769 9.94230769 5.92307692 9.94230769 5.92307692 12.0576923 9.94230769 12.0576923 9.94230769 16.1165865 12.0576923 16.1165865 12.0576923 12.0576923 16.0769231 12.0576923 16.0769231 9.94230769 12.0576923 9.94230769"></polygon>
+            <path d="M11,0 C4.9346,0 0,4.9346 0,11 C0,17.0654 4.9346,22 11,22 C17.0654,22 22,17.0654 22,11 C22,4.9346 17.0654,0 11,0 Z M11,19.8 C6.1479,19.8 2.2,15.8521 2.2,11 C2.2,6.1479 6.1479,2.2 11,2.2 C15.8521,2.2 19.8,6.1479 19.8,11 C19.8,15.8521 15.8521,19.8 11,19.8 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
