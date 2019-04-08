@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 ::selection {
-  background: $main-yellow;
+  //background: $main-yellow;
 }
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
@@ -50,7 +50,16 @@ a {
 .txt-block {
   display: block;
 }
-
+h3 {
+  color: $h3-text-color;
+}
+fieldset {
+  legend {
+    h3 {
+      color: $h3-text-color;
+    }
+  }
+}
 
 // icon Fonts
 @font-face {
@@ -82,19 +91,19 @@ a {
 }
 
 .icon-usage_report:before {
-  content: "\e903";
+  content: "\e904";
 }
 .icon-billing_list:before {
-  content: "\e900";
+  content: "\e901";
 }
 .icon-customer_data:before {
-  content: "\e901";
+  content: "\e900";
 }
 .icon-member_management:before {
   content: "\e902";
 }
 .icon-setting:before {
-  content: "\e904";
+  content: "\e903";
 }
 
 // Button Styles
@@ -108,7 +117,7 @@ a {
 }
 
 a.txt-link {
-  color: $main-yellow;
+  color: $blue-navy;
   text-decoration: underline;
   &:hover {
     text-decoration: none;
@@ -154,13 +163,16 @@ a.txt-link {
 }
 .btn-flat-gray {
   background: #eee;
+  border: 1px solid #ddd;
   color: #29abe2;
   &:hover {
     background: #ddd;
   }
 }
 .btn-gradient {
+  border: 1px solid #ffd108;
   color: #111;
+  margin: 0 2px;
   @include linear-gradient(top, lighten($main-yellow, 25%), $main-yellow); 
   &:hover,
   &:focus {
@@ -191,6 +203,22 @@ a.txt-link {
     background: #0093E7!important;
   }
 }
+.btn-gradient-green {
+  color: #fff;
+  @include linear-gradient(top, #89D600, #4EC303); 
+  &:hover,
+  &:focus {
+    background: #89D600;
+    color: #fff;
+    text-decoration: none;
+  }
+  &:focus {
+    @include dropShadow(0, 1px, 3px, 0px, #89D600);
+  }
+  &:active {
+    background: #4EC303!important;
+  }
+}
 .btn-gradient-red {
   color: #fff;
   @extend .btn-gradient;
@@ -205,6 +233,7 @@ a.txt-link {
   }
 }
 .btn-gradient-gray {
+  border: 1px solid #ddd;
   color: #111;
   @extend .btn-gradient;
   @include linear-gradient(right, #bbb, #ddd);
@@ -226,7 +255,8 @@ input[type=radio] {
     border: 1px solid #eee;
     cursor: pointer;
     color: #666;
-    padding: 6px 25px;
+    margin-right: 0;
+    padding: 6px 15px;
     &:hover {
       background: #ddd;
     }
@@ -253,7 +283,11 @@ input[type=radio] {
   // Checked
   &:checked + label {
     background: $main-yellow;
+    background-image: url('../images/radiobtn_checked.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
     color: #000;
+
   }
 }
 // 表格裡的按鈕
@@ -315,7 +349,73 @@ input[type=radio] {
     background-size: cover;
   }
 }
-
+// Round Button Styles NEW
+.btn-circle {
+  border: none;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  transition: all 0.2s linear;
+  opacity: .5;
+  @include borderRadius(18px);
+  //@include linear-gradient(top, #FFDE81, #FFF8E2);
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+  }
+  &:disabled, &.disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+// 帳戶
+.btn-account {
+  background-image: url('../images/btn-round/btn-account.svg');
+}
+// 編輯
+.btn-edit {
+  background-image: url('../images/btn-round/btn-edit.svg');
+}
+// 授權訂閱
+.btn-auth {
+  background-image: url('../images/btn-round/btn-auth.svg');
+}
+// 重置密碼
+.btn-pwd {
+  background-image: url('../images/btn-round/btn-pwd.svg');
+}
+// Azure訂閱
+.btn-azure {
+  background-image: url('../images/btn-round/btn-azure.svg');
+}
+// 訂閱關聯
+.btn-relate {
+  background-image: url('../images/btn-round/btn-relate.svg');
+}
+// 軟體訂閱
+.btn-software {
+  background-image: url('../images/btn-round/btn-software.svg');
+}
+// 原始資料
+.btn-raw {
+  background-image: url('../images/btn-round/btn-raw.svg');
+}
+// 保留個體
+.btn-keep {
+  background-image: url('../images/btn-round/btn-keep.svg');
+}
+// 使用量報表
+.btn-usage {
+  background-image: url('../images/btn-round/btn-usage.svg');
+}
+// 費用報表
+.btn-fee {
+  background-image: url('../images/btn-round/btn-fee.svg');
+}
+// 刪除
+.btn-delete {
+  background-image: url('../images/btn-round/btn-delete.svg');
+}
 // ------------------------------------------------------------------------------------------------ //
 // Page Styles
 .navbar-vertical {
@@ -399,6 +499,10 @@ input[type=radio] {
   padding: 10px 20px 40px;
   height: calc(100vh - 75px);
   overflow: auto;
+  position: relative;
+  &.no-padding {
+    padding: 0;
+  }
 }
 // 使用者帳號區塊
 .nav-userinfo-bar {
@@ -425,6 +529,7 @@ input[type=radio] {
     .nav-user-pwdChange {
       background: #000;
       visibility: hidden;
+      min-width: 140px;
       opacity: 0;
       padding: 10px 20px;
       position: absolute;
@@ -441,6 +546,9 @@ input[type=radio] {
         visibility: visible;
         opacity: 1; 
       }
+    }
+    img {
+      width: 15px;
     }
   }
   .nav-logout {
@@ -575,43 +683,68 @@ input[type=radio] {
     @include borderRadius(5px);
   }
 }
+.formWrap {
+  margin: 0 auto;
+  //margin-top: 20px;
+  width: 90%;
+  @include clearfix();
+  .form-group {
+    @include clearfix();
+  }
+}
 .formWrap_center {
   margin: 0 auto;
   margin-top: 20px;
   width: 50%;
   @include clearfix();
-  input[type="text"],
-  input[type="password"],
-  input[type="search"],
-  input[type="date"],
-  textarea {
-    font-size: 16px;
-    @include borderRadius(0);
+}
+label {
+  margin-right: 16px;
+  &.label-required {
+    &:after {
+      content: '*';
+      color: red;
+      font-size: 15px;
+      padding: 0 2px;
+    }
+  }
+}
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="date"],
+textarea {
+  font-size: 16px;
+  margin-right: 15px;
+  padding: 6px 8px;
+  @include borderRadius(0);
 
-    &.input-5digit {
-      width: 5em;
-    }
-    &.input-date {
-      width: 10em;
-    }
+  &.input-5digit {
+    width: 5em;
   }
-  .dropdown-toggle {
-    padding-top: 6px !important;
-    padding-bottom: 6px !important;
+  &.input-date {
+    width: 10em;
   }
-  .dropdown-menu {
-    font-size: 16px;
-    & > .active {
-      & > a {
+}
+.full-width {
+  width: 100% !important;
+}
+.dropdown-toggle {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+.dropdown-menu {
+  font-size: 16px;
+  & > .active {
+    & > a {
+      background: $main-yellow;
+      color: #000;
+      font-weight: bold;
+      &:focus,
+      &:hover {
         background: $main-yellow;
         color: #000;
         font-weight: bold;
-        &:focus,
-        &:hover {
-          background: $main-yellow;
-          color: #000;
-          font-weight: bold;
-        }
       }
     }
   }
@@ -619,6 +752,12 @@ input[type=radio] {
 .input-group {
   .form-control {
     float: none;
+  }
+}
+.form-control {
+  &:focus {
+    border-color: #909090;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #ffe056;
   }
 }
 
@@ -675,6 +814,7 @@ input[type=radio] {
   }
 }
 table.dataTable {
+  margin-bottom: 0 !important;
   thead {
     .sorting,
     .sorting_asc,
@@ -701,9 +841,10 @@ table.dataTable {
   }
   tbody {
     tr {
-      @include transition(all, .3s, linear);
+      @include transition(all, .2s, linear);
       &:hover {
-        box-shadow: #ccc 0 1px 3px 3px;
+        //box-shadow: #ccc 0 1px 3px 3px;
+        background: lighten($main-yellow, 30%);
       }
     }
     td {
@@ -1392,4 +1533,43 @@ tr.shown:hover {
     color: #000;
     text-decoration: none; 
   }
+}
+
+// 授權訂閱
+.Sec-subscribe-wrap {
+  background: #605F4C;
+  @include clearfix();
+}
+.Sec-subscribe-form,
+.Sec-subscribe-list {
+  float: left;
+}
+.Sec-subscribe-form {
+  background: #D2CFB1;
+  padding: 20px 0;
+  position: fixed;
+  width: 480px;
+  &::after {
+    content: '';
+    background: #D2CFB1;
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 20px;
+    right: -11px;
+    transform: rotate(45deg);
+
+  }
+}
+.Sec-subscribe-list {
+  background: #fff;
+  position: absolute;
+  left: 500px;
+  width: calc(100% - 500px);
+}
+.subscribe-form-btn {
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
 }

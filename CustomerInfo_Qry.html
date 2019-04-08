@@ -30,9 +30,9 @@
           </a>
         </li>
         <li class="nav-item active">
-          <a href="Customer_Qry.html">
+          <a href="CustomerInfo_Qry.html">
             <span class="v-menu-icon"><i class="icon-customer_data"></i></span>
-            <span class="navbar-link">客戶資訊</span>
+            <span class="navbar-link">訂閱管理</span>
           </a>
         </li>
         <li class="nav-item">
@@ -63,9 +63,9 @@
   </div><!-- /.nav-userinfo-bar -->
 
   <div class="page-title-header">
-    <h2 class="page-title">客戶資訊</h2>
+    <h2 class="page-title">訂閱管理</h2>
     <div class="data-qry-wrap">
-      <a href="Customer_Add.html" class="btn btn-gradient btn-round"><img src="images/btnicon-add.svg" alt="">新增客戶資訊</a>
+      <a href="CustomerInfo_Add.html" class="btn btn-gradient btn-round"><img src="images/btnicon-add.svg" alt="">新增客戶資訊</a>
     </div><!-- /.data-qry-wrap -->
   </div><!-- /.page-title-header -->
 
@@ -75,59 +75,65 @@
         <table id="AppQryTable" class="table table-hover table-serial">
           <thead>
             <tr>
-              <th>客戶</th>
+              <th>客戶名稱</th>
               <th>網域</th>
-              <th>優惠折數</th>
-              <th class="no-sort">聯絡人</th>
-              <th class="no-sort align-center" width="60">折數設定</th>
-              <th class="no-sort align-center" width="60">編輯</th>
+              <th class="no-sort align-center" width="60">帳戶</th>
+              <th class="no-sort align-center" width="60">授權訂閱</th>
+              <th class="no-sort align-center" width="64">Azure訂閱</th>
+              <th class="no-sort align-center" width="60">軟體訂閱</th>
+              <th class="no-sort align-center" width="60">保留個體</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>pscaber</td>
               <td>pscaber.onmicrosoft.com</td>
-              <td>0.85</td>
-              <td>c1@aaa.com.tw<br>c2@aaa.com.tw<br>c3@aaa.com.tw</td>
-              <td align="center"><button class="btn_intable_round btn_intable_discountSetting" onclick="location.href='Customer_discountSetting.html'"></button></td>
-              <td align="center"><button class="btn_intable_round btn_intable_edit" onclick="location.href='Customer_Add.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-account" onclick="location.href='CustomerInfo_Add.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-auth" onclick="location.href='LicenseInfo_Qry.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-azure" onclick="location.href='AzureInfo_Qry.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-software" onclick="location.href=''"></button></td>
+              <td align="center"><button class="btn-circle btn-keep" onclick="location.href=''"></button></td>
             </tr>
             <tr>
-              <td>pscaber1</td>
-              <td>pscaber1.onmicrosoft.com</td>
-              <td>0.78</td>
-              <td>c1@aaa.com.tw<br>c2@aaa.com.tw<br>c3@aaa.com.tw</td>
-              <td align="center"><button class="btn_intable_round btn_intable_discountSetting"></button></td>
-              <td align="center"><button class="btn_intable_round btn_intable_edit"></button></td>
+              <td>pscaber</td>
+              <td>pscaber.onmicrosoft.com</td>
+              <td align="center"><button class="btn-circle btn-account" onclick="location.href='CustomerInfo_Add.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-auth" onclick="location.href='LicenseInfo_Qry.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-azure" onclick="location.href='AzureInfo_Qry.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-software" onclick="location.href=''"></button></td>
+              <td align="center"><button class="btn-circle btn-keep" onclick="location.href=''"></button></td>
             </tr>
             <tr>
-              <td>pscaber2</td>
-              <td>pscaber2.onmicrosoft.com</td>
-              <td>0.87</td>
-              <td>d1@aaa.com.tw<br>d2@aaa.com.tw</td>
-              <td align="center"><button class="btn_intable_round btn_intable_discountSetting"></button></td>
-              <td align="center"><button class="btn_intable_round btn_intable_edit"></button></td>
+              <td>pscaber</td>
+              <td>pscaber.onmicrosoft.com</td>
+              <td align="center"><button class="btn-circle btn-account" onclick="location.href='CustomerInfo_Add.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-auth" onclick="location.href='LicenseInfo_Qry.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-azure" onclick="location.href='AzureInfo_Qry.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-software" onclick="location.href=''"></button></td>
+              <td align="center"><button class="btn-circle btn-keep" onclick="location.href=''"></button></td>
             </tr>
             <tr>
-              <td>pscaber3</td>
-              <td>pscaber3.onmicrosoft.com</td>
-              <td>0.44</td>
-              <td>e1@aaa.com.tw<br>e2@aaa.com.tw</td>
-              <td align="center"><button class="btn_intable_round btn_intable_discountSetting"></button></td>
-              <td align="center"><button class="btn_intable_round btn_intable_edit"></button></td>
+              <td>pscaber</td>
+              <td>pscaber.onmicrosoft.com</td>
+              <td align="center"><button class="btn-circle btn-account" onclick="location.href='CustomerInfo_Add.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-auth" onclick="location.href='LicenseInfo_Qry.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-azure" onclick="location.href='AzureInfo_Qry.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-software" onclick="location.href=''"></button></td>
+              <td align="center"><button class="btn-circle btn-keep" onclick="location.href=''"></button></td>
             </tr>
             <tr>
-              <td>pscaber4</td>
-              <td>pscaber4.onmicrosoft.com</td>
-              <td>0.64</td>
-              <td>f1@aaa.com.tw<br>f2@aaa.com.tw</td>
-              <td align="center"><button class="btn_intable_round btn_intable_discountSetting" disabled></button></td>
-              <td align="center"><button class="btn_intable_round btn_intable_edit" disabled></button></td>
+              <td>pscaber</td>
+              <td>pscaber.onmicrosoft.com</td>
+              <td align="center"><button class="btn-circle btn-account" onclick="location.href='CustomerInfo_Add.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-auth" onclick="location.href='LicenseInfo_Qry.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-azure" onclick="location.href='AzureInfo_Qry.html'"></button></td>
+              <td align="center"><button class="btn-circle btn-software" onclick="location.href=''"></button></td>
+              <td align="center"><button class="btn-circle btn-keep" onclick="location.href=''"></button></td>
             </tr>
           </tbody>
         </table>
       </div><!-- /.table-responsive -->
-    </div><!-- /.container-->
+    </div><!-- /.inner-wrapper-->
 
   </div><!-- /.contentWrapper -->
 

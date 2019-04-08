@@ -34,9 +34,9 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="Customer_Qry.html">
+          <a href="CustomerInfo_Qry.html">
             <span class="v-menu-icon"><i class="icon-customer_data"></i></span>
-            <span class="navbar-link">客戶資訊</span>
+            <span class="navbar-link">訂閱管理</span>
           </a>
         </li>
         <li class="nav-item active">
@@ -57,8 +57,7 @@
 
   <div class="nav-userinfo-bar">
     <div class="nav-userinfo">
-      <div class="nav-usermail">
-        admin01@pershing.onmicrosoft.com
+      <div class="nav-usermail"><img src="images/icon_change_pwd.png" alt=""> admin01@pershing.onmicrosoft.com
         <div class="nav-user-pwdChange">
           <a class="btn btn-gradient-blue" href="https://account.activedirectory.windowsazure.com/changepassword.aspx">變更密碼</a>
         </div>
@@ -68,16 +67,16 @@
   </div><!-- /.nav-userinfo-bar -->
 
   <div class="page-title-header">
-    <h2 class="page-title"><a href="MemberManagement_Qry.html">人員管理</a>新增人員</h2>
+    <h2 class="page-title"><a href="MemberManagement_Qry.html">人員管理</a>新增人員資訊</h2>
   </div><!-- /.page-title-header -->
 
   <div class="contentWrapper">
     <div class="inner-wrapper">
-      
+  
       <div class="formWrap_center">
         <form method="post">
           <div class="form-group">
-            <label for="customerName">客戶名稱</label>
+            <label for="customerName">公司名稱</label>
             <select name="" id="customerName" class="selectpicker" data-live-search="true">
               <option value="">CSI-ABER(pscaber.onmicrosoft.com)</option>
               <option value="">GAMANIA-果核(kingkey.com.tw)</option>
@@ -103,11 +102,42 @@
               <option value="">豐睿股份有限公司(housewin.com.tw) </option>           
             </select>
           </div>
-          <span class="field-validation-valid text-danger"></span>
+
+          <div class="form-group">
+            <label for="mainContact">訂閱類型</label>
+            <div class="form-group">
+              <!-- Radio Buttons -->
+              <input id="SubsType1" name="SubsType" type="radio" value="A"  checked="" />
+              <label for="SubsType1">授權訂閱</label>
+              <input id="SubsType2" name="SubsType" type="radio" value="M" />
+              <label for="SubsType2">Azure 訂閱</label>
+              <input id="SubsType3" name="SubsType" type="radio" value="S" />
+              <label for="SubsType3">軟體訂閱</label>
+              <input id="SubsType4" name="SubsType" type="radio" value="Q" />
+              <label for="SubsType4">保留個體</label>
+            </div>
+            <span class="field-validation-valid text-danger"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="PrSubName">主要訂閱</label>
+            <select name="" id="PrSubName" class="selectpicker">
+              <option value="">選項一</option>
+              <option value="">選項二</option>
+              <option value="">選項三</option>
+              <option value="">選項四</option>    
+            </select>
+          </div>
 
           <div class="form-group">
             <label for="customerAccount">帳號</label>
             <input class="form-control" id="customerAccount" name="" type="text" value="" />
+            <span class="field-validation-valid text-danger"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="ContactMail">聯絡人信箱 <span class="txt-small">(密碼會發至此信箱)</span></label>
+            <input class="form-control" id="ContactMail" name="" type="text" value="" />
             <span class="field-validation-valid text-danger"></span>
           </div>
 
@@ -129,58 +159,11 @@
 
           <div class="form-group btn-wrap">
             <a class="btn btn-round btn-gradient-blue btn-lg">儲存</a>
-            <a class="btn btn-round btn-gradient-gray btn-lg" href="MemberManagement_Qry.html">取消</a>
-            <a class="btn btn-round btn-gradient-red btn-lg pull-right">刪除</a>
+            <a class="btn btn-round btn-gradient-gray btn-lg" href="MemberManagement_Qry.html">返回</a>
           </div>
 
           </form>
-
-          <div class="form-group">
-            <label for="customerName">額外顯示訂閱</label>
-            <select name="" id="" class="selectpicker">
-              <option value="">請選擇訂閱項目</option>
-              <option value="">GAMANIA-果核(kingkey.com.tw)</option>
-              <option value="">GAMANIA-果核2(kingxuntw.onmicrosoft.com)</option>
-              <option value="">GAMANIA-果核2-2(Statesmantw.onmicrosoft.com)</option>
-              <option value="">中餘國際股份有限公司(idealdragon.com)</option>   
-            </select>
-          </div>
-      </div><!-- /.formWrap_center -->
-
-      <div class="row-fluid">
-        <div class="table-responsive">
-          <table id="AppQryTable" class="table table-hover table-serial">
-            <thead>
-              <tr>
-                <th>CompanyName</th>
-                <th>FriendlyName</th>
-                <th>SubscriptionID</th>
-                <th class="no-sort align-center" width="60">刪除</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>pscaber</td>
-                <td>Microsoft Azure</td>
-                <td>Lorem ipsum dolor sit amet</td>
-                <td align="center"><button class="btn_intable_round btn_intable_delete"></button></td>
-              </tr>
-              <tr>
-                <td>pscaber</td>
-                <td>Microsoft Azure</td>
-                <td>Lorem ipsum dolor sit amet</td>
-                <td align="center"><button class="btn_intable_round btn_intable_delete"></button></td>
-              </tr>
-              <tr>
-                <td>pscaber</td>
-                <td>Microsoft Azure</td>
-                <td>Lorem ipsum dolor sit amet</td>
-                <td align="center"><button class="btn_intable_round btn_intable_delete disabled"></button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div><!-- /.table-responsive -->
-      </div>
+      </div><!-- /.formWrap --> 
 
     </div><!-- /.inner-wrapper-->
 

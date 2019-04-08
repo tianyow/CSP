@@ -19,12 +19,12 @@
     <!-- // 登入 -->
     <div id="LoginForm" class="form-section">
       <div class="form-group">
-        <label for="">使用者帳號</label>
+        <label for="AccountID">使用者帳號</label>
         <input class="form-control" id="AccountID" name="AccountID" placeholder="" type="text" value="" />
         <span class="field-validation-valid"></span>
       </div>
       <div class="form-group">
-        <label for="">使用者密碼</label>
+        <label for="AccountPwd">使用者密碼</label>
         <input class="form-control error" id="AccountPwd" name="AccountPwd" placeholder="" type="password" />
         <span class="field-validation-valid">錯誤訊息內容</span>
       </div>
@@ -65,10 +65,7 @@
         $('#LoginForm').removeClass('formHide').addClass('formShow');
         $('#PwdRestForm').removeClass('formShow').addClass('formHide');
       });
-
-
     });
   </script>
-
 </body>
 </html>

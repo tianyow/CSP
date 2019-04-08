@@ -8,16 +8,12 @@
   <!-- css -->
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
-  <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.css" />
   <link rel="stylesheet" href="vendor/DataTables/datatables.min.css"/>
   <link rel="stylesheet" href="css/CSP-styles.css">
-
 </head>
 
 <body>
-
   <nav id="CSP-navbar" class="navbar-vertical">
-
     <div href="#"><img src="images/CSP-logo.svg" alt=""></div>
     <div class="vertical-menu">
       <ul class="nav navbar-nav">
@@ -33,7 +29,7 @@
             <span class="navbar-link">費用報表</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a href="CustomerInfo_Qry.html">
             <span class="v-menu-icon"><i class="icon-customer_data"></i></span>
             <span class="navbar-link">訂閱管理</span>
@@ -45,7 +41,7 @@
             <span class="navbar-link" >人員管理</span>
           </a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <a href="Setting.html">
             <span class="v-menu-icon"><i class="icon-setting"></i></span>
             <span class="navbar-link" >其他設定</span>
@@ -63,57 +59,40 @@
   </div><!-- /.nav-userinfo-bar -->
 
   <div class="page-title-header">
-    <h2 class="page-title">其他設定</h2>
+    <h2 class="page-title"><a href="CustomerInfo_Qry.html">訂閱管理</a>Azure 訂閱</h2>
+    <div class="data-qry-wrap">
+      <a href="AzureInfo_Add.html" class="btn btn-gradient btn-round"><img src="images/btnicon-add.svg" alt="">新增 Azure資訊</a>
+    </div><!-- /.data-qry-wrap -->
   </div><!-- /.page-title-header -->
 
   <div class="contentWrapper">
     <div class="inner-wrapper">
-      
-      <div class="formWrap_center">
-        <form method="post">
-          <div class="form-group">
-            <label for="customerName">客戶名稱</label>
-            <select name="" id="customerName" class="selectpicker" data-live-search="true">
-              <option value="">CSI-ABER(pscaber.onmicrosoft.com)</option>
-              <option value="">GAMANIA-果核(kingkey.com.tw)</option>
-              <option value="">GAMANIA-果核2(kingxuntw.onmicrosoft.com)</option>
-              <option value="">GAMANIA-果核2-2(Statesmantw.onmicrosoft.com)</option>
-              <option value="">中餘國際股份有限公司(idealdragon.com)</option>
-              <option value="">元亨法律事務所(lccpartnersyilan.onmicrosoft.com)</option>
-              <option value="">世達先進科技股份公限公司(gatigii.onmicrosoft.com)</option>
-              <option value="">包德貿易股份有公司(baoder.onmicrosoft.com)</option>
-              <option value="">台灣競舞娛樂有限公司(garena01.onmicrosoft.com)</option>
-              <option value="">竹北市農會(cpcfa.org.tw)</option>
-              <option value="">佐見啦生技股份有限公司(jolacarettm.onmicrosoft.com)</option>
-              <option value="">香港商烽泰科技有限公司(unicornfintech.com)</option>
-              <option value="">悠活原力有限公司(yohopowertw.onmicrosoft.com)</option>
-              <option value="">都城實業股份有限公司(gwfsd.com.tw)</option>
-              <option value="">筑科科技股份有限公司(chuker.onmicrosoft.com)</option>
-              <option value="">微智冷科技股份有限公司(deepthermal.com)</option>
-              <option value="">新豐鄉農會(Sinfongfarmers.onmicrosoft.com)</option>
-              <option value="">群光電能科技股份有限公司(CPLync.onmicrosoft.com)</option>
-              <option value="">遊戲橘子數位科技股份有限公司(gamania01.onmicrosoft.com)</option>
-              <option value="">德宇製作有限公司(zgtech.onmicrosoft.com)</option>
-              <option value="">橙宏投資顧問有限公司(chenhong.onmicrosoft.com)</option>
-              <option value="">豐睿股份有限公司(housewin.com.tw) </option>      
-            </select>
-          </div>
-          <span class="field-validation-valid text-danger"></span>
-
-          <div class="form-group">
-            <label for="updateDbTimeRange">期間</label>
-            <div class="input-group">
-              <input class="form-control input-date datepicker" id="updateDbTimeFrom" name="" type="text" value="" /> ~
-              <input class="form-control input-date datepicker" id="updateDbTimeTo" name="" type="text" value="" />
-            </div>
-          </div>
-
-          <div class="form-group align-center btn-wrap">
-            <input type="submit" value="更新資料庫" class="btn btn-round btn-gradient-blue btn-lg" />
-          </div>
-
-          </form>
-      </div><!-- /.formWrap_center -->
+      <div class="table-responsive">
+        <table id="AppQryTable" class="table table-hover table-serial">
+          <thead>
+            <tr>
+              <th>訂閱名稱</th>
+              <th>訂閱狀態</th>
+              <th>每月額度</th>
+              <th>每月累積量</th>
+              <th>優惠折數</th>
+              <th>特殊折數</th>
+              <th class="no-sort align-center" width="60">編輯</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>dgc09-01</td>
+              <td>作用中</td>
+              <td>NT$ 0</td>
+              <td>NT$ 4,534.801</td>
+              <td>0.85</td>
+              <td>0.85</td>
+              <td align="center"><button class="btn-circle btn-edit" onclick="location.href='AzureInfo_Edit.html'"></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- /.table-responsive -->
 
     </div><!-- /.container-->
 
@@ -138,7 +117,6 @@
 
   <!-- script -->
   <script src="vendor/jquery/dist/jquery.min.js"></script>
-  <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
   <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
   <script src="vendor/DataTables/datatables.min.js"></script>

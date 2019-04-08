@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北祥 CSP Customer Portal</title>
+  <link rel="SHORTCUT ICON" href="PSC-CSP.png" />
+  <!-- css -->
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="vendor/DataTables/datatables.min.css"/>
+  <link rel="stylesheet" href="css/CSP-styles.css">
+
+</head>
+
+<body>
+
+  <nav id="CSP-navbar" class="navbar-vertical">
+
+    <div href="#"><img src="images/CSP-logo.svg" alt=""></div>
+    <div class="vertical-menu">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a href="UsageReport_Qry.html">
+            <span class="v-menu-icon"><i class="icon-usage_report"></i></span>
+            <span class="navbar-link">使用量</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="Billing_Qry.html">
+            <span class="v-menu-icon"><i class="icon-billing_list"></i></span>
+            <span class="navbar-link">費用報表</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="CustomerInfo_Qry.html">
+            <span class="v-menu-icon"><i class="icon-customer_data"></i></span>
+            <span class="navbar-link">訂閱管理</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="MemberManagement_Qry.html">
+            <span class="v-menu-icon"><i class="icon-member_management"></i></span>
+            <span class="navbar-link" >人員管理</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="Setting.html">
+            <span class="v-menu-icon"><i class="icon-setting"></i></span>
+            <span class="navbar-link" >其他設定</span>
+          </a>
+        </li>
+      </ul>
+    </div><!-- /.vertical-menu -->
+  </nav><!-- / #admin-navbar -->
+
+  <div class="nav-userinfo-bar">
+    <div class="nav-userinfo">
+      <div class="nav-usermail"><img src="images/icon_change_pwd.png" alt=""> admin01@pershing.onmicrosoft.com
+        <div class="nav-user-pwdChange">
+          <a class="btn btn-gradient-blue" href="https://account.activedirectory.windowsazure.com/changepassword.aspx">變更密碼</a>
+        </div>
+      </div><!-- /.nav-usermail -->
+      <a class="nav-logout" href="" data-toggle="modal" data-target="#msg-logout">登出</a>
+    </div><!-- /.nav-userinfo -->
+  </div><!-- /.nav-userinfo-bar -->
+
+  <div class="page-title-header">
+    <h2 class="page-title"><a href="CustomerInfo_Qry.html">訂閱管理</a>新增客戶資訊</h2>
+  </div><!-- /.page-title-header -->
+
+  <div class="contentWrapper">
+    <div class="inner-wrapper">
+      
+      <div class="formWrap">
+        <form method="post">
+          <fieldset>
+            <legend><h3>公司</h3></legend>
+            <div class="form-group form-inline">
+              <div class="col-md-2">
+                <label for="CompanyName" class="label-required">公司名稱</label>
+              </div>
+              <div class="col-md-4">
+                <input class="form-control full-width" id="CompanyName" name="" type="text" value="" />
+                <span class="field-validation-valid text-danger"></span>
+              </div>
+              <div class="col-md-6">
+                <label for="Domain" class="label-required">主要網域名稱</label>
+                <div class="input-group">
+                  <input class="form-control" id="Domain" type="text" aria-describedby="basic-addon2">
+                  <span class="input-group-addon" id="basic-addon2">.onmicrosoft.com</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-2">
+                <label for="AddressLine1" class="label-required">地址第1行</label>
+              </div>
+              <div class="col-md-10">
+                <input class="form-control" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-2">
+                <label for="AddressLine2">地址第2行</label>
+              </div>
+              <div class="col-md-10">
+                <input class="form-control" type="text">
+              </div>
+            </div>
+            <div class="form-group form-inline">
+              <div class="col-md-2">
+                <label for="City" class="label-required">市/鎮</label>
+              </div>
+              <div class="col-md-10">
+                <input class="form-control" id="City" type="text">
+                <label for="State">洲/省</label>
+                <input class="form-control" id="State" type="text">
+                <label for="PostalCode" class="label-required">郵遞區號</label>
+                <input class="form-control" id="PostalCode" type="text">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><h3>主要聯絡人</h3></legend>
+            <div class="form-group form-inline">
+              <div class="col-md-2">
+                <label for="FirstName" class="label-required">名字</label>
+              </div>
+              <div class="col-md-10">
+                <input type="text" class="form-control" id="FirstName">
+                <label for="LastName" class="label-required">姓氏</label>
+                <input type="text" class="form-control" id="LastName">
+                <label for="PhoneNumber">電話號碼</label>
+                <input type="text" class="form-control" id="PhoneNumber">
+              </div>
+            </div>
+            <div class="form-group form-inline">
+              <div class="col-md-2">
+                <label for="Email" class="label-required">電子郵件</label>
+              </div>
+              <div class="col-md-10">
+                <input type="text" class="form-control full-width" id="Email">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><h3>Microsoft 雲端合約 </h3></legend>
+            <div class="form-group">
+              <input type="checkbox" id="CloudAgreement">
+              <label for="CloudAgreement">
+                客戶已接受最新的 <a class="txt-link" href="https://docs.microsoft.com/en-us/partner-center/agreements" target="_blank">Microsoft Cloud 合約</a> ｜ <a class="txt-link" href="https://docs.microsoft.com/en-us/partner-center/confirm-consent" target="_blank">相關資訊</a>
+              </label>
+            </div>
+            <div class="form-group form-inline">
+              <div class="col-md-2">
+                <label for="CloudFirstName">名字</label>
+              </div>
+              <div class="col-md-10">
+                <input type="text" class="form-control" id="CloudFirstName">
+                <label for="CloudLastName">姓氏</label>
+                <input type="text" class="form-control" id="CloudLastName">
+                <label for="CloudPhoneNumber">電話號碼</label>
+                <input type="text" class="form-control" id="CloudPhoneNumber">
+              </div>
+            </div>
+            <div class="form-group form-inline">
+              <div class="col-md-2">
+                <label for="CloudEmail">電子郵件</label>
+              </div>
+              <div class="col-md-10">
+                <input type="text" class="form-control full-width" id="CloudEmail">
+              </div>
+            </div>
+          </fieldset>
+          
+          <div class="form-group align-center btn-wrap">
+            <input type="submit" value="儲存" class="btn btn-round btn-gradient-blue btn-lg" />
+            <a class="btn btn-round btn-gradient-gray btn-lg" href="Customer_Qry.html">取消</a>
+          </div>
+
+          </form>
+      </div><!-- /.formWrap_center -->
+
+    </div><!-- /.container-->
+
+  </div><!-- /.contentWrapper -->
+
+  <!-- modal -->
+    <div class="modal fade" id="msg-logout" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header"></div>
+          <div id="message-sm-body" class="modal-body align-center">
+            確定要登出嗎?
+          </div>
+          <div class="modal-footer">
+            <a href="index.html" class="btn btn-gradient btn-lg">確定</a>
+            <button type="button" class="btn btn-link btn-lg" data-dismiss="modal" onclick="clearShowMessage();">取消</button>
+          </div>
+        </div>
+        <!-- <a class="btnCloseModal" data-dismiss="modal">&times;</a> -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  <!-- script -->
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+  <script src="vendor/DataTables/datatables.min.js"></script>
+  <script src="js/CSP-scripts.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#AppQryTable').DataTable(qryTableOptions);
+      $('.selectpicker').selectpicker({});
+    });
+  </script>
+
+</body>
+
+</html>
