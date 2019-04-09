@@ -1,3 +1,14 @@
+
+### 2019-04-09 更新
+
+## 更新 DataTable 屬性
+### DataTable 新增 Default設定 (更新 js檔)
+1. \ $('#AppQryTable').DataTable(qryTableOptions); 把 qryTableOptions 拿掉
+2. 可自訂筆數
+### CSS 微調 請更新
+
+***
+
 #### 2019-04-08 更新
 
 ## 更新 訂閱管理

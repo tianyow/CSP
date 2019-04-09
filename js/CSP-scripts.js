@@ -1,6 +1,5 @@
-/* DataTable 英翻中
---------------------------------------------------------------------- */
-var qryTableOptions = {
+// DataTable 的基本設定
+$.extend( $.fn.dataTable.defaults, {
   paging: true,
   lengthChange: false,
   searching: false,
@@ -31,7 +30,44 @@ var qryTableOptions = {
       "targets"  : 'no-sort',
       "orderable": false,
     }]
-}
+} );
+
+/* DataTable 英翻中
+--------------------------------------------------------------------- */
+// var qryTableOptions = {
+//   paging: true,
+//   lengthChange: false,
+//   searching: false,
+//   pageLength: 20,
+//   language: 
+//   {
+//     "emptyTable":     "目前無任何資料",
+//     "info":           "檢視 _START_ to _END_ of _TOTAL_ 資料",
+//     "info":           "共 _TOTAL_ 筆",
+//     "infoEmpty":      "無相關資料",
+//     "infoFiltered":   "(在 _MAX_ 筆資料中找到)",
+//     "infoPostFix":    "",
+//     "thousands":      ",",
+//     "lengthMenu":     "檢視 _MENU_ 筆",
+//     "loadingRecords": "載入中...",
+//     "processing":     "處理中...",
+//     "search":         "搜尋:",
+//     "zeroRecords":    "無相關結果",
+//     "paginate": {
+//         "first":      "第一筆",
+//         "last":       "最後一筆",
+//         "next":       ">",
+//         "previous":   "<"
+//     }
+//   },
+//   "order": [],
+//     "columnDefs": [ {
+//       "targets"  : 'no-sort',
+//       "orderable": false,
+//     }]
+// }
+
+
 /* 使用量細項展開
 --------------------------------------------------------------------- */
 $(document).ready(function() {  

@@ -496,7 +496,7 @@ input[type=radio] {
   @include clearfix();
 }
 .inner-wrapper {
-  padding: 10px 20px 40px;
+  padding: 10px 20px 80px;
   height: calc(100vh - 75px);
   overflow: auto;
   position: relative;
@@ -850,6 +850,7 @@ table.dataTable {
     td {
       color: #555;
       font-weight: bold;
+      padding: 5px 8px;
     }
   }
 
@@ -1544,11 +1545,13 @@ tr.shown:hover {
 .Sec-subscribe-list {
   float: left;
 }
+$susbcribe-form-width: 550px;
 .Sec-subscribe-form {
   background: #D2CFB1;
   padding: 20px 0;
   position: fixed;
-  width: 480px;
+  width: $susbcribe-form-width;
+  top: 200px;
   &::after {
     content: '';
     background: #D2CFB1;
@@ -1556,17 +1559,17 @@ tr.shown:hover {
     width: 22px;
     height: 22px;
     position: absolute;
-    top: 20px;
-    right: -11px;
-    transform: rotate(45deg);
+    top: 50%;
+    right: -2px;
+    transform: rotate(45deg) translateY(-50%);
 
   }
 }
 .Sec-subscribe-list {
   background: #fff;
   position: absolute;
-  left: 500px;
-  width: calc(100% - 500px);
+  left: $susbcribe-form-width + 20px;
+  width: calc(100% - $susbcribe-form-width);
 }
 .subscribe-form-btn {
   position: absolute;
