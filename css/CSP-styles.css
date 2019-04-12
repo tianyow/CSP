@@ -2,6 +2,10 @@
 * {
   box-sizing: border-box; }
 
+::selection {
+  background: #FFD000;
+  color: #fff; }
+
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif; }
 
@@ -608,7 +612,7 @@ input[type=radio] {
     display: inline-block;
     margin: 0 auto; }
   .data-qry-wrap-fixed:hover {
-    padding: 30px 0; }
+    padding: 20px 0 40px; }
 
 .form-query {
   padding: 15px;
@@ -669,29 +673,29 @@ label {
     font-size: 15px;
     padding: 0 2px; }
 
-input[type="text"],
-input[type="password"],
-input[type="search"],
-input[type="date"],
-textarea {
+input[type="text"].form-control,
+input[type="password"].form-control,
+input[type="search"].form-control,
+input[type="date"].form-control,
+textarea.form-control {
   font-size: 16px;
   margin-right: 15px;
   padding: 6px 8px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0; }
-  input[type="text"].input-5digit,
-  input[type="password"].input-5digit,
-  input[type="search"].input-5digit,
-  input[type="date"].input-5digit,
-  textarea.input-5digit {
-    width: 5em; }
-  input[type="text"].input-date,
-  input[type="password"].input-date,
-  input[type="search"].input-date,
-  input[type="date"].input-date,
-  textarea.input-date {
-    width: 10em; }
+input[type="text"].input-5digit,
+input[type="password"].input-5digit,
+input[type="search"].input-5digit,
+input[type="date"].input-5digit,
+textarea.input-5digit {
+  width: 5em; }
+input[type="text"].input-date,
+input[type="password"].input-date,
+input[type="search"].input-date,
+input[type="date"].input-date,
+textarea.input-date {
+  width: 10em; }
 
 .full-width {
   width: 100% !important; }
@@ -928,6 +932,8 @@ tr.shown:hover {
   background-image: url("../images/icon-datepicker.svg") !important;
   background-repeat: no-repeat !important;
   background-position: right center !important; }
+  .datepicker[readonly] {
+    background: #fff; }
 
 .datepicker-btn {
   background: url("../images/icon-datepicker.svg") no-repeat;
@@ -1079,7 +1085,7 @@ tr.shown:hover {
   background: #ffd84a !important; }
 
 .ui-datepicker-today {
-  background: rgba(220, 220, 220, 0.5) !important; }
+  background: rgba(220, 220, 220, 0.5); }
 
 .bootstrap-select {
   border: 1px solid #ccc;
@@ -1215,7 +1221,6 @@ tr.shown:hover {
     text-decoration: none; }
 
 .Sec-subscribe-wrap {
-  background: #605F4C;
   zoom: 1; }
   .Sec-subscribe-wrap:before, .Sec-subscribe-wrap:after {
     content: '';
@@ -1229,30 +1234,43 @@ tr.shown:hover {
 
 .Sec-subscribe-form {
   background: #D2CFB1;
-  padding: 20px 0;
-  position: fixed;
-  width: 550px;
-  top: 200px; }
-  .Sec-subscribe-form::after {
-    content: '';
-    background: #D2CFB1;
-    display: block;
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    top: 50%;
-    right: -2px;
-    transform: rotate(45deg) translateY(-50%); }
+  display: block;
+  padding: 15px 0 0;
+  width: 100%;
+  margin-top: -260px;
+  position: relative;
+  transition: all .3s linear; }
+  .Sec-subscribe-form.open {
+    margin-top: 0; }
+
+.subs-panel-toggle {
+  background: #D2CFB1 url(../images/toggle-arrow.svg) center center no-repeat;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+  font-size: 15px;
+  padding: 5px 16px;
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  margin-left: -30px; }
+  .subs-panel-toggle:hover {
+    background-color: #bfbb91; }
+  .subs-panel-toggle:hover, .subs-panel-toggle:focus {
+    color: #fff;
+    text-decoration: none; }
+  .subs-panel-toggle.open {
+    transform: rotate(180deg); }
 
 .Sec-subscribe-list {
   background: #fff;
-  position: absolute;
-  left: 570px;
-  width: calc(100% - $susbcribe-form-width); }
+  padding: 20px 25px;
+  width: 100%; }
 
 .subscribe-form-btn {
-  position: absolute;
-  right: 20px;
-  bottom: -20px; }
+  float: right;
+  margin-top: 20px; }
 
 /*# sourceMappingURL=CSP-styles.css.map */

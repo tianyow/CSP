@@ -1,5 +1,13 @@
+#### 2019-04-11 更新
 
-### 2019-04-09 更新
+## 更新 新增授權訂閱
++ CSS 跟 JS 請更新
++ 新增 images/toggle-arrow.svg
++ 修改米其林圖示
+
+***
+
+#### 2019-04-09 更新
 
 ## 更新 DataTable 屬性
 ### DataTable 新增 Default設定 (更新 js檔)

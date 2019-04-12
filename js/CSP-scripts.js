@@ -146,3 +146,28 @@ $(".datepicker").datepicker(opt);
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+
+
+/* 新增授權訂閱
+--------------------------------------------------------------------- */
+$(function () {
+  var sbForm = $('.Sec-subscribe-form');
+  var sbFormToggle = $('.subs-panel-toggle');
+
+  sbForm.addClass('open');
+
+  sbFormToggle.click(function(e){
+    e.preventDefault();
+
+    if (sbForm.hasClass('open')) {
+      sbForm.removeClass('open');
+      sbFormToggle.removeClass('open');
+    } else {
+      sbForm.addClass('open');
+      sbFormToggle.addClass('open');
+    }
+  })
+
+
+})
+
