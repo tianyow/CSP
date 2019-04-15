@@ -1,3 +1,15 @@
+#### 2019-04-15 更新
+
+## 新增 通知郵件
++ 新增客戶通知 https://tianyow.github.io/CSP/emails/CSP_email_create_customer.html
++ 新增使用者通知 https://tianyow.github.io/CSP/emails/CSP_email_create_user.html
++ 預約下單通知 https://tianyow.github.io/CSP/emails/CSP_email_schedule_order.html
++ 訂閱啟動通知 https://tianyow.github.io/CSP/emails/CSP_email_activate_sub.html
++ 訂閱暫停通知 https://tianyow.github.io/CSP/emails/CSP_email_suspend_sub.html
++ 訂閱即將到期通知 https://tianyow.github.io/CSP/emails/CSP_email_expiring_sub.html
++ Azure訂閱預算額度通知 https://tianyow.github.io/CSP/emails/CSP_email_azure_budget_alert.html
+
+
 #### 2019-04-11 更新
 
 ## 更新 新增授權訂閱
