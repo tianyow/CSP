@@ -1,3 +1,11 @@
+#### 2019-04-19 更新
+
+## 儀表板相關
++ 新增 icon (請更新 icon fonts) (只加在使用量那頁做示意)
++ 加入 dashboard iframe 的樣式
+
+***
+
 #### 2019-04-15 更新
 
 ## 新增 通知郵件
@@ -9,6 +17,7 @@
 + 訂閱即將到期通知 https://tianyow.github.io/CSP/emails/CSP_email_expiring_sub.html
 + Azure訂閱預算額度通知 https://tianyow.github.io/CSP/emails/CSP_email_azure_budget_alert.html
 
+***
 
 #### 2019-04-11 更新
 

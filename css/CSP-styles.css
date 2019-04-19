@@ -66,26 +66,29 @@ fieldset legend h3 {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  font-size: 32px;
+  font-size: 33px;
   color: #a0a0a0;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 .icon-usage_report:before {
-  content: "\e904"; }
+  content: "\e905"; }
 
 .icon-billing_list:before {
-  content: "\e901"; }
-
-.icon-customer_data:before {
-  content: "\e900"; }
-
-.icon-member_management:before {
   content: "\e902"; }
 
-.icon-setting:before {
+.icon-customer_data:before {
+  content: "\e901"; }
+
+.icon-member_management:before {
   content: "\e903"; }
+
+.icon-setting:before {
+  content: "\e904"; }
+
+.icon-dashboard:before {
+  content: "\e900"; }
 
 .btn.active.focus,
 .btn.active:focus,
@@ -559,7 +562,7 @@ input[type=radio] {
         text-decoration: none;
         border-bottom: none; }
       .page-title-header .page-title a:after {
-        content: '/';
+        content: '\\';
         color: #eee;
         font-weight: 100;
         position: absolute;
@@ -1272,5 +1275,15 @@ tr.shown:hover {
 .subscribe-form-btn {
   float: right;
   margin-top: 20px; }
+
+#embedContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden; }
+  #embedContainer iframe {
+    border: none; }
 
 /*# sourceMappingURL=CSP-styles.css.map */
